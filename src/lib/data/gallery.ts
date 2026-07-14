@@ -1,0 +1,65 @@
+import type { GalleryImage } from "@/types";
+
+export const galleryImages: GalleryImage[] = [
+  {
+    id: "g1",
+    src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop",
+    alt: "فنجان اسپرسو روی میز چوبی با نور گرم",
+    width: 1200,
+    height: 1500,
+    span: "tall",
+  },
+  {
+    id: "g2",
+    src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1400&auto=format&fit=crop",
+    alt: "باریستا در حال آماده‌سازی قهوه",
+    width: 1400,
+    height: 934,
+    span: "wide",
+  },
+  {
+    id: "g3",
+    src: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1000&auto=format&fit=crop",
+    alt: "دانه‌های قهوه برشته‌شده از نمای نزدیک",
+    width: 1000,
+    height: 1000,
+  },
+  {
+    id: "g4",
+    src: "https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=1200&auto=format&fit=crop",
+    alt: "فضای داخلی گرم و لوکس کافه با نورپردازی ملایم",
+    width: 1200,
+    height: 1500,
+    span: "tall",
+  },
+  {
+    id: "g5",
+    src: "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop",
+    alt: "کیک شکلاتی اسلایسی روی بشقاب سفید",
+    width: 1200,
+    height: 900,
+  },
+  {
+    id: "g6",
+    src: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1400&auto=format&fit=crop",
+    alt: "لاته آرت روی فنجان سفالی",
+    width: 1400,
+    height: 934,
+    span: "wide",
+  },
+  {
+    id: "g7",
+    src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1000&auto=format&fit=crop",
+    alt: "میز چیده‌شده کافه با فنجان‌های وینتیج",
+    width: 1000,
+    height: 1250,
+    span: "tall",
+  },
+  {
+    id: "g8",
+    src: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1200&auto=format&fit=crop",
+    alt: "دانه‌های قهوه در حال ریخته شدن از دستگاه آسیاب",
+    width: 1200,
+    height: 900,
+  },
+];

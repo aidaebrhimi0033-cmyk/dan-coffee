@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Brand palette ---- */
+  --color-maroon: #6b0f1a;
+  --color-maroon-dark: #4a0a12;
+  --color-maroon-light: #8a1a26;
+  --color-cream: #f8f5f2;
+  --color-beige: #efe6d8;
+  --color-gold: #c9a227;
+  --color-gold-light: #e4c877;
+  --color-coffee: #2a1810;
+  --color-coffee-light: #402419;
+  --color-ink: #1c1410;
+
+  /* ---- Type ---- */
+  --font-display: var(--font-vazirmatn), "Vazirmatn", sans-serif;
+  --font-body: var(--font-vazirmatn), "Vazirmatn", sans-serif;
+  --font-editorial: var(--font-noto-naskh), "Noto Naskh Arabic", serif;
+
+  /* ---- Radii ---- */
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.875rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+
+  /* ---- Shadows ---- */
+  --shadow-soft: 0 20px 60px -20px rgb(42 24 16 / 0.25);
+  --shadow-soft-sm: 0 8px 24px -8px rgb(42 24 16 / 0.18);
+  --shadow-gold: 0 8px 30px -8px rgb(201 162 39 / 0.35);
+
+  /* ---- Motion ---- */
+  --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-spin-slow: spin 18s linear infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-18px) translateX(6px); }
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Visible keyboard focus everywhere — accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Thin luxury scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon);
+  border-radius: 999px;
+  border: 2px solid var(--color-cream);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  right: 1rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--color-maroon);
+  color: var(--color-cream);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-xs);
+  transition: top 0.2s var(--ease-lux);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Gold hairline divider used as the recurring "seal" motif */
+.dan-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 50%,
+    transparent
+  );
+}
+
+.dan-text-balance {
+  text-wrap: balance;
+}
